@@ -400,7 +400,9 @@ class FeatureSelector():
         self.identify_missing(selection_params['missing_threshold'])
         self.identify_single_unique()
         self.identify_collinear(selection_params['correlation_threshold'])
-        self.identify_zero_importance(task = selection_params['task'], eval_metric = selection_params['eval_metric'])
+        self.identify_zero_importance(task = selection_params['task'],
+				      eval_metric = selection_params['eval_metric'],
+				      n_iterations = selection_params['n_iterations'])
         self.identify_low_importance(selection_params['cumulative_importance'])
         
         # Find the number of features identified to drop
