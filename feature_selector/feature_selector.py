@@ -650,4 +650,3 @@ class FeatureSelector():
 
     def reset_plot(self):
 	pass
-        #plt.rcParams = plt.rcParamsDefault
