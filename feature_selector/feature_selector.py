@@ -519,7 +519,7 @@ class FeatureSelector():
         self.reset_plot()
         
         # Histogram of missing values
-        plt.style.use('seaborn-white')
+        #plt.style.use('seaborn-white')
         plt.figure(figsize = (7, 5))
         plt.hist(self.missing_stats['missing_fraction'], bins = np.linspace(0, 1, 11), edgecolor = 'k', color = 'red', linewidth = 1.5)
         plt.xticks(np.linspace(0, 1, 11));
@@ -649,4 +649,5 @@ class FeatureSelector():
             print('%d features required for %0.2f of cumulative importance' % (importance_index + 1, threshold))
 
     def reset_plot(self):
-        plt.rcParams = plt.rcParamsDefault
+	pass
+        #plt.rcParams = plt.rcParamsDefault
